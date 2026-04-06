@@ -3,99 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <title>John's Project Hub</title>
-	<link rel="icon" type="image/png" href="J-logo.png">
+    <link rel="icon" type="image/png" href="J-logo.png">
+
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Roboto&display=swap');
+        body {
+            font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            background-color: #f3e2c1; /* Cream */
+            color: #841617; /* Crimson text */
+        }
 
-    body {
-        font-family: 'Roboto', Arial, sans-serif;
-        margin: 0;
-        background-color: #f3e2c1; /* Cream */
-        color: #841617; /* Crimson text */
-    }
+        header {
+            background-color: #841617; /* Crimson */
+            color: #f3e2c1; /* Cream */
+            padding: 40px 20px;
+        }
 
-    header {
-        background-color: #841617; /* Crimson */
-        color: #f3e2c1; /* Cream */
-        padding: 60px 20px;
-        text-align: center;
-    }
-	
-	    header h1 {
-        font-family: 'Crimson Text', serif;
-        font-size: 3rem;
-        margin: 0;
-    }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-    header p {
-        font-size: 1.3rem;
-        margin-top: 10px;
-    }
+        .logo-square {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
 
-    .section {
-        padding: 40px 20px;
-        max-width: 900px;
-        margin: auto;
-    }
+        .logo-square:hover {
+            transform: scale(1.05);
+        }
 
-    h2 {
-        font-family: 'Crimson Text', serif;
-        border-bottom: 2px solid #841617;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-    }
-	
-	.logo {
-		width: 80px;
-		height: auto;
-		margin-bottom: 20px;
-	}
+        .header-text h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            color: #f3e2c1;
+        }
 
-    .project {
-        background: white;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        color: #333;
-    }
+        .header-text p {
+            font-size: 1.2rem;
+            margin-top: 5px;
+            color: #f3e2c1;
+        }
 
-    .project h3 {
-        font-family: 'Crimson Text', serif;
-        margin-top: 0;
-        color: #841617;
-    }
+        .section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
 
-    .buttons a {
-        display: inline-block;
-        margin-right: 10px;
-        padding: 10px 15px;
-        background: #841617; /* Crimson */
-        color: #f3e2c1; /* Cream */
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-    }
+        h2 {
+            border-bottom: 2px solid #841617;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
 
-    .buttons a:hover {
-        background: #fe0040; /* Accent red */
-    }
+        .project {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #333;
+        }
 
-    footer {
-        background-color: #841617;
-        color: #f3e2c1;
-        padding: 20px;
-        text-align: center;
-        margin-top: 40px;
-    }
-</style>
+        .project h3 {
+            margin-top: 0;
+            color: #841617;
+        }
+
+        .buttons a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 15px;
+            background: #841617; /* Crimson */
+            color: #f3e2c1; /* Cream */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .buttons a:hover {
+            background: #fe0040; /* Accent red */
+        }
+
+        footer {
+            background-color: #841617;
+            color: #f3e2c1;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>John's Project Hub</h1>
-    <p>Practical tools, built in my spare time.</p>
-	<img src="J-logo.png" alt="John Logo" class="logo">
+    <div class="header-content">
+        <a href="index.html">
+            <img src="J-logo.png" alt="John Logo" class="logo-square">
+        </a>
+        <div class="header-text">
+            <h1>John's Project Hub</h1>
+            <p>Practical tools, built in my spare time.</p>
+        </div>
+    </div>
 </header>
 
 <div class="section">
@@ -118,7 +136,6 @@
             <a href="https://github.com/AdminJohnny/AudioRenamerGUI" target="_blank">View on GitHub</a>
         </div>
     </div>
-
 </div>
 
 <footer>
