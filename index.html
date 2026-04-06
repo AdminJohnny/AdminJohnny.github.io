@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>John's Project Hub</title>
-    <link rel="icon" type="image/png" href="J-logo.png">
+    <link rel="icon" type="image/png" href="J-logopng">
 
     <style>
         body {
@@ -17,17 +17,15 @@
             background-color: #841617; /* Crimson */
             color: #f3e2c1; /* Cream */
             padding: 40px 20px;
+            position: relative;
         }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
+        /* Logo positioned far left */
         .logo-square {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
             width: 80px;
             height: 80px;
             border-radius: 15px;
@@ -38,6 +36,11 @@
 
         .logo-square:hover {
             transform: scale(1.05);
+        }
+
+        /* Centered header text */
+        .header-text {
+            text-align: center;
         }
 
         .header-text h1 {
@@ -105,14 +108,12 @@
 <body>
 
 <header>
-    <div class="header-content">
-        <a href="index.html">
-            <img src="J-logo.png" alt="John Logo" class="logo-square">
-        </a>
-        <div class="header-text">
-            <h1>John's Project Hub</h1>
-            <p>Practical tools, built in my spare time.</p>
-        </div>
+    <a href="index.html">
+        <img src="J-logo.png" alt="John Logo" class="logo-square">
+    </a>
+    <div class="header-text">
+        <h1>John's Project Hub</h1>
+        <p>Practical tools, built in my spare time.</p>
     </div>
 </header>
 
