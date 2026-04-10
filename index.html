@@ -2,179 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John's Project Hub</title>
-    <link rel="icon" type="image/png" href="J-logo.png">
-
-    <style>
-        body {
-            font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            background-color: #f3e2c1; /* Cream */
-            color: #841617; /* Crimson text */
-        }
-
-        header {
-            background-color: #841617; /* Crimson */
-            color: #f3e2c1; /* Cream */
-            padding: 40px 20px;
-            position: relative;
-        }
-
-        /* Logo fixed to far left, subtle hover */
-        .logo-square {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 80px;
-            height: 80px;
-            border-radius: 15px;
-            object-fit: cover;
-            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease;
-        }
-
-        .logo-square:hover {
-            transform: translateY(-50%) scale(1.02);
-        }
-
-        /* Centered header text */
-        .header-text {
-            text-align: center;
-        }
-
-        .header-text h1 {
-            font-size: 2.8rem;
-            margin: 0;
-            color: #f3e2c1;
-        }
-
-        .header-text p {
-            font-size: 1.2rem;
-            margin-top: 5px;
-            color: #f3e2c1;
-        }
-
-        .section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        h2 {
-            border-bottom: 2px solid #841617;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .project {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            color: #333;
-        }
-
-        .project h3 {
-            margin-top: 0;
-            color: #841617;
-        }
-
-        .buttons a {
-            display: inline-block;
-            margin-right: 10px;
-            padding: 10px 15px;
-            background: #841617; /* Crimson */
-            color: #f3e2c1; /* Cream */
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .buttons a:hover {
-            background: #fe0040; /* Accent red */
-        }
-
-        footer {
-            background-color: #841617;
-            color: #f3e2c1;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        /* Mobile layout adjustments */
-        @media (max-width: 600px) {
-
-            header {
-                padding: 60px 20px 40px;
-            }
-
-            .logo-square {
-                left: 50%;
-                top: 20px;
-                transform: translateX(-50%);
-                width: 70px;
-                height: 70px;
-            }
-
-            .logo-square:hover {
-                transform: translateX(-50%) scale(1.02);
-            }
-
-            .header-text {
-                margin-top: 90px;
-            }
-
-            .header-text h1 {
-                font-size: 2.2rem;
-            }
-
-            .header-text p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-    <a href="index.html">
-        <img src="J-logo.png" alt="John Logo" class="logo-square">
-    </a>
-    <div class="header-text">
-        <h1>John's Project Hub</h1>
-        <p>Practical tools, built in my spare time.</p>
-    </div>
-</header>
+    <!-- HEADER -->
+    <header class="hero">
+        <div class="overlay"></div>
 
-<div class="section">
-    <h2>About Me</h2>
-    <p>
-        Hi, I'm John. I enjoy building simple, practical tools that solve real problems.
-        This site is where I share the projects I work on outside of my day job.
-        Everything here is built by me — from the code to the website itself.
-    </p>
-</div>
+        <div class="signals"></div>
 
-<div class="section">
-    <h2>My Tools</h2>
-
-    <div class="project">
-        <h3>AudioRenamer</h3>
-        <p>A Windows tool for renaming audiobook files quickly and safely.</p>
-        <div class="buttons">
-            <a href="#">Download (coming soon)</a>
-            <a href="https://github.com/AdminJohnny/AudioRenamerGUI" target="_blank">View on GitHub</a>
+        <div class="hero-content">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>John’s Project Hub</h1>
+            <p>Practical tools, built in my spare time.</p>
         </div>
-    </div>
-</div>
+    </header>
 
-<footer>
-    © 2026 John — Built with HTML, CSS, and GitHub Pages
-</footer>
+    <!-- INDEX SECTION -->
+    <section class="index">
+        <h2>Explore</h2>
+
+        <div class="index-grid">
+            <a href="tools.html" class="index-card">
+                <h3>Tools & Utilities</h3>
+                <p>All the little tools I build to solve real problems.</p>
+            </a>
+
+            <a href="about.html" class="index-card">
+                <h3>About Me</h3>
+                <p>Who I am, what I do, and my work experience.</p>
+            </a>
+
+            <a href="blog.html" class="index-card">
+                <h3>Blog</h3>
+                <p>Thoughts, notes, and occasional updates.</p>
+            </a>
+
+            <a href="cv.html" class="index-card">
+                <h3>CV / Resume</h3>
+                <p>Download a PDF version of my CV.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 John — Built with HTML, CSS, and GitHub Pages</p>
+
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
 
 </body>
 </html>

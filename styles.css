@@ -1,0 +1,128 @@
+/* GLOBAL STYLES */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f3e9; /* cream */
+    color: #3a2a2a;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+.hero {
+    position: relative;
+    height: 320px;
+    color: #f7f3e9; /* cream text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image: url('grain-texture.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Deep Crimson overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(120, 0, 20, 0.65);
+    z-index: 1;
+}
+
+/* Geometric signals layer */
+.signals {
+    position: absolute;
+    inset: 0;
+    background-image: url('geometric-mixed.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    z-index: 2;
+
+    /* Subtle movement animation */
+    animation: drift 18s ease-in-out infinite alternate,
+               fade 12s ease-in-out infinite alternate;
+}
+
+/* Drift animation */
+@keyframes drift {
+    from { transform: translate(0px, 0px); }
+    to   { transform: translate(6px, -6px); }
+}
+
+/* Soft fade animation */
+@keyframes fade {
+    from { opacity: 0.18; }
+    to   { opacity: 0.32; }
+}
+
+/* HERO CONTENT */
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.logo {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+/* INDEX SECTION */
+.index {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.index-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.index-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 6px solid #780014; /* Deep Crimson accent */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.index-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #eee2d2;
+    margin-top: 40px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #780014;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (min-width: 700px) {
+    .index-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
