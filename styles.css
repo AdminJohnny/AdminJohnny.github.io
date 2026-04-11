@@ -46,19 +46,15 @@ a {
 .site-logo {
     width: 80px;
     height: auto;
-    animation: logoDrift 10s ease-in-out infinite alternate;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Desktop-only logo animation */
-@media (max-width: 768px) {
-    .site-logo {
-        animation: none;
+/* Desktop-only hover animation */
+@media (min-width: 769px) {
+    .site-logo:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
-}
-
-@keyframes logoDrift {
-    from { transform: translate(0px, 0px); opacity: 0.95; }
-    to { transform: translate(4px, -4px); opacity: 1; }
 }
 
 .header-text {
@@ -73,6 +69,12 @@ a {
 .header-text p {
     font-size: 1rem;
     margin-top: 0.4rem;
+}
+
+/* Fade-in animation for entire header */
+@keyframes headerFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* INTRO SECTION */
