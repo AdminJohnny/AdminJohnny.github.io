@@ -25,7 +25,10 @@ a {
     background-blend-mode: overlay;
     color: #FDFBF7; /* Cream text */
     padding: 2rem 1rem;
+    opacity: 0; /* for fade-in */
+    animation: headerFade 1s ease-out forwards;
 }
+
 
 .header-inner {
     display: flex;
