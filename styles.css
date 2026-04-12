@@ -59,6 +59,28 @@ a {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* MOBILE HEADER FIX */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        position: static;
+    }
+
+    .logo-link {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+    }
+
+    .site-logo {
+        width: 70px;
+    }
+
+    .header-text {
+        margin: 0;
+    }
+}
+
 /* SIDE-BY-SIDE PANELS */
 .panel-container {
     display: flex;
@@ -81,20 +103,50 @@ a {
 .left-panel {
     font-family: 'Cavolini', Arial, sans-serif;
     color: #A6192E;
-    font-size: 1.35rem;
+    font-size: 1.5rem;          /* slightly larger body text */
     line-height: 1.8;
+    padding-left: 40px;         /* move text right so it starts under logo */
 }
 
-/* BUTTON CARDS — SMALL & NEAT */
+.intro-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.intro-body {
+    margin: 0 0 10px 0;
+}
+
+.intro-note {
+    margin: 0;
+}
+
+/* RIGHT PANEL BUTTONS */
+.right-panel {
+    align-items: flex-start;
+    margin-left: 20px;          /* nudge buttons further right */
+}
+
 .index-card {
     background: #fff;
     padding: 12px 18px;
     border-radius: 6px;
     border-left: 5px solid #A6192E;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: max-content;          /* <<< SMALL, NEAT, COMPACT */
+    width: 230px;               /* all cards same width */
     margin-bottom: 14px;
     font-size: 1rem;
+    display: block;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .index-card:hover {
@@ -112,10 +164,20 @@ a {
 
     .panel {
         width: 100%;
+        padding-left: 0;
+    }
+
+    .left-panel {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .right-panel {
+        margin-left: 20px;
     }
 
     .index-card {
-        width: 100%; /* mobile-friendly */
+        width: 100%;
     }
 }
 
