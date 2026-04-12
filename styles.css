@@ -103,9 +103,9 @@ a {
 .left-panel {
     font-family: 'Cavolini', Arial, sans-serif;
     color: #A6192E;
-    font-size: 1.5rem;          /* slightly larger body text */
+    font-size: 1.5rem;
     line-height: 1.8;
-    padding-left: 40px;         /* move text right so it starts under logo */
+    padding-left: 40px; /* aligns text under logo */
 }
 
 .intro-heading {
@@ -124,7 +124,7 @@ a {
 /* RIGHT PANEL BUTTONS */
 .right-panel {
     align-items: flex-start;
-    margin-left: 20px;          /* nudge buttons further right */
+    margin-left: 60px; /* moved further right on desktop */
 }
 
 .index-card {
@@ -133,7 +133,7 @@ a {
     border-radius: 6px;
     border-left: 5px solid #A6192E;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 230px;               /* all cards same width */
+    width: 230px; /* consistent card width */
     margin-bottom: 14px;
     font-size: 1rem;
     display: block;
@@ -173,11 +173,14 @@ a {
     }
 
     .right-panel {
-        margin-left: 20px;
+        margin-left: 20px; /* aligns cards under text */
+        width: calc(100% - 40px);
     }
 
     .index-card {
-        width: 100%;
+        width: calc(100% - 40px); /* prevents overflow */
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
