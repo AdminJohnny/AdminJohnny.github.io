@@ -109,6 +109,9 @@ a {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
+
+    /* Ensures footer stays at bottom on desktop */
+    min-height: 60vh;
 }
 
 /* LEFT COLUMN */
@@ -151,6 +154,7 @@ a {
     .body-container {
         flex-direction: column;
         padding: 20px;
+        min-height: auto; /* Prevents forced height on mobile */
     }
 
     .body-left, .body-right {
