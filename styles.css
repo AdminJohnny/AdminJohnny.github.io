@@ -16,6 +16,14 @@ a {
     color: inherit;
 }
 
+/* CUSTOM FONT: CAVOLINI */
+@font-face {
+    font-family: 'Cavolini';
+    src: url('assets/fonts/Cavolini.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* HEADER */
 .site-header {
     background-color: #A6192E; /* Deep Crimson */
@@ -104,7 +112,7 @@ a {
 .body-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center; /* center columns vertically */
     gap: 40px;
     padding: 40px 20px;
     max-width: 1200px;
@@ -117,12 +125,13 @@ a {
 /* LEFT COLUMN */
 .body-left {
     flex: 3; /* 60% */
-    font-size: 1.15rem;
-    line-height: 1.7;
+    font-family: 'Cavolini', Arial, sans-serif;
+    font-size: 1.3rem; /* larger text */
+    line-height: 1.8;
 }
 
 .intro-line {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -133,6 +142,8 @@ a {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    justify-content: center;   /* center buttons vertically */
+    align-items: center;       /* center buttons horizontally */
 }
 
 /* BUTTON CARDS */
@@ -142,6 +153,8 @@ a {
     border-radius: 6px;
     border-left: 5px solid #A6192E;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    max-width: 320px; /* keeps buttons nicely sized */
 }
 
 .index-card:hover {
@@ -155,11 +168,20 @@ a {
         flex-direction: column;
         padding: 20px;
         min-height: auto; /* Prevents forced height on mobile */
+        align-items: flex-start;
     }
 
     .body-left, .body-right {
         flex: none;
         width: 100%;
+    }
+
+    .body-right {
+        align-items: stretch;
+    }
+
+    .index-card {
+        max-width: none;
     }
 }
 
