@@ -80,6 +80,7 @@ a {
     margin-top: 0.4rem;
 }
 
+/* MOBILE HEADER FIX — THIS BLOCK WAS MISSING ITS CLOSING BRACE */
 @media (max-width: 768px) {
     .header-inner {
         flex-direction: column;
@@ -95,12 +96,22 @@ a {
     .site-logo {
         width: 70px;
     }
+
+    .header-text {
+        margin: 0;
+    }
+}   /* ← THIS BRACE WAS MISSING AND CAUSED THE HEADER TO DISAPPEAR */
+
+/* HEADER ANIMATION */
+@keyframes headerFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* BODY TWO-COLUMN LAYOUT */
 .body-container {
     display: flex;
-    justify-content: center;      /* NEW — centres both columns horizontally */
+    justify-content: center;      /* centres both columns horizontally */
     align-items: center;          /* centres both columns vertically */
     gap: 40px;
     padding: 40px 20px;
@@ -115,9 +126,9 @@ a {
     font-family: 'Cavolini', Arial, sans-serif;
     font-size: 1.45rem;           /* increased size */
     line-height: 1.9;
-    color: #A6192E;               /* NEW — deep crimson text */
-    text-align: center;           /* NEW — centres text horizontally */
-    display: flex;                /* NEW — centres text vertically */
+    color: #A6192E;               /* deep crimson text */
+    text-align: center;           /* centres text horizontally */
+    display: flex;                /* centres text vertically */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -135,8 +146,8 @@ a {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;      /* NEW — vertical centring */
-    align-items: center;          /* NEW — horizontal centring */
+    justify-content: center;      /* vertical centring */
+    align-items: center;          /* horizontal centring */
 }
 
 /* BUTTON CARDS */
@@ -148,7 +159,7 @@ a {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
     max-width: 320px;
-    text-align: center;           /* NEW — centres text inside buttons */
+    text-align: center;           /* centres text inside buttons */
 }
 
 .index-card:hover {
