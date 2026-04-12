@@ -43,8 +43,6 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: none;
-    margin: 0;
     flex-wrap: wrap;
 }
 
@@ -97,53 +95,48 @@ a {
     .site-logo {
         width: 70px;
     }
-
-    .header-text {
-        margin: 0;
-    }
-}
-
-@keyframes headerFade {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 /* BODY TWO-COLUMN LAYOUT */
 .body-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* center columns vertically */
+    justify-content: center;      /* NEW — centres both columns horizontally */
+    align-items: center;          /* centres both columns vertically */
     gap: 40px;
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
-
-    /* Ensures footer stays at bottom on desktop */
     min-height: 60vh;
 }
 
 /* LEFT COLUMN */
 .body-left {
-    flex: 3; /* 60% */
+    flex: 3;
     font-family: 'Cavolini', Arial, sans-serif;
-    font-size: 1.3rem; /* larger text */
-    line-height: 1.8;
+    font-size: 1.45rem;           /* increased size */
+    line-height: 1.9;
+    color: #A6192E;               /* NEW — deep crimson text */
+    text-align: center;           /* NEW — centres text horizontally */
+    display: flex;                /* NEW — centres text vertically */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro-line {
-    font-size: 1.6rem;
+    font-size: 1.8rem;            /* slightly larger headline */
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 /* RIGHT COLUMN */
 .body-right {
-    flex: 2; /* 40% */
+    flex: 2;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    justify-content: center;   /* center buttons vertically */
-    align-items: center;       /* center buttons horizontally */
+    gap: 20px;
+    justify-content: center;      /* NEW — vertical centring */
+    align-items: center;          /* NEW — horizontal centring */
 }
 
 /* BUTTON CARDS */
@@ -154,7 +147,8 @@ a {
     border-left: 5px solid #A6192E;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
-    max-width: 320px; /* keeps buttons nicely sized */
+    max-width: 320px;
+    text-align: center;           /* NEW — centres text inside buttons */
 }
 
 .index-card:hover {
@@ -167,17 +161,12 @@ a {
     .body-container {
         flex-direction: column;
         padding: 20px;
-        min-height: auto; /* Prevents forced height on mobile */
-        align-items: flex-start;
+        min-height: auto;
+        align-items: center;
     }
 
     .body-left, .body-right {
-        flex: none;
         width: 100%;
-    }
-
-    .body-right {
-        align-items: stretch;
     }
 
     .index-card {
