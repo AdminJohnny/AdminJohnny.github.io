@@ -108,31 +108,22 @@ a {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* BODY TWO-COLUMN LAYOUT */
-.body-container {
-    display: flex;
-    justify-content: center;      /* centres the two columns as a group */
-    align-items: center;          /* vertical centring */
-    gap: 40px;
+/* PAGE BLOCKS (NEW LAYOUT) */
+.page-block {
+    max-width: 700px;          /* Option B */
+    margin: 0 auto;            /* centres the block horizontally */
     padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 60vh;
-}
-
-/* LEFT COLUMN */
-.body-left {
-    flex: 3;
-    font-family: 'Cavolini', Arial, sans-serif;
-    font-size: 1.45rem;
-    line-height: 1.9;
-    color: #A6192E;
-    
-    /* COLUMN centred, TEXT left-aligned */
     display: flex;
     flex-direction: column;
-    justify-content: center;      /* centre column vertically */
-    align-items: flex-start;      /* keep text left-aligned */
+    align-items: flex-start;   /* keeps content left-aligned */
+}
+
+/* INTRO TEXT BLOCK */
+.intro-block {
+    font-family: 'Cavolini', Arial, sans-serif;
+    color: #A6192E;
+    font-size: 1.45rem;
+    line-height: 1.9;
 }
 
 .intro-line {
@@ -141,15 +132,8 @@ a {
     margin-bottom: 10px;
 }
 
-/* RIGHT COLUMN */
-.body-right {
-    flex: 2;
-    
-    /* COLUMN centred */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;      /* vertical centring */
-    align-items: center;          /* horizontal centring */
+/* BUTTON BLOCK */
+.buttons-block {
     gap: 20px;
 }
 
@@ -160,11 +144,8 @@ a {
     border-radius: 6px;
     border-left: 5px solid #A6192E;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 100%;
-    max-width: 320px;
-
-    /* TEXT left-aligned again */
-    text-align: left;
+    width: 100%;               /* fills the 700px block */
+    text-align: left;          /* ensures text stays left-aligned */
 }
 
 .index-card:hover {
@@ -172,21 +153,11 @@ a {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* MOBILE LAYOUT */
+/* MOBILE */
 @media (max-width: 768px) {
-    .body-container {
-        flex-direction: column;
+    .page-block {
+        max-width: 100%;
         padding: 20px;
-        min-height: auto;
-        align-items: center;
-    }
-
-    .body-left, .body-right {
-        width: 100%;
-    }
-
-    .index-card {
-        max-width: none;
     }
 }
 
