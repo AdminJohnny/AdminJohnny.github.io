@@ -105,7 +105,7 @@ a {
     color: #A6192E;
     font-size: 1.5rem;
     line-height: 1.8;
-    padding-left: 40px; /* aligns text under logo */
+    padding-left: 40px; /* desktop: start roughly under logo */
 }
 
 .intro-heading {
@@ -121,10 +121,10 @@ a {
     margin: 0;
 }
 
-/* RIGHT PANEL BUTTONS */
+/* RIGHT PANEL BUTTONS (DESKTOP) */
 .right-panel {
     align-items: flex-start;
-    margin-left: 60px; /* moved further right on desktop */
+    margin-left: 120px; /* pushed further right on desktop */
 }
 
 .index-card {
@@ -165,20 +165,23 @@ a {
     .panel {
         width: 100%;
         padding-left: 0;
+        align-items: center; /* centre panels’ content */
     }
 
     .left-panel {
         padding-left: 20px;
         padding-right: 20px;
+        text-align: center;   /* centre text on mobile */
     }
 
     .right-panel {
-        margin-left: 20px; /* aligns cards under text */
-        width: calc(100% - 40px);
+        margin-left: 0;
+        width: 100%;
+        align-items: center;  /* centre cards under text */
     }
 
     .index-card {
-        width: calc(100% - 40px); /* prevents overflow */
+        width: 260px;         /* neat, centred cards */
         margin-left: 0;
         margin-right: 0;
     }
