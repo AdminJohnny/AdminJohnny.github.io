@@ -25,23 +25,23 @@ a {
     background-blend-mode: overlay;
     color: #FDFBF7; /* Cream text */
     padding: 2rem 1rem;
-    opacity: 0; /* for fade-in */
+    opacity: 0;
     animation: headerFade 1s ease-out forwards;
 }
 
-/* NEW HEADER LAYOUT FIX */
+/* HEADER LAYOUT */
 .header-inner {
     position: relative;
     display: flex;
-    justify-content: center; /* centres the text container */
+    justify-content: center;
     align-items: center;
-    width: 100%;      /* NEW — full width */
-    max-width: none;  /* NEW — remove restriction */
-    margin: 0;        /* NEW — no centring box */
+    width: 100%;
+    max-width: none;
+    margin: 0;
     flex-wrap: wrap;
 }
 
-/* Logo positioned on far left (desktop) */
+/* Logo far-left */
 .logo-link {
     position: absolute;
     left: 0;
@@ -55,7 +55,7 @@ a {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Desktop-only hover animation */
+/* Desktop hover */
 @media (min-width: 769px) {
     .site-logo:hover {
         transform: translateY(-4px);
@@ -63,7 +63,7 @@ a {
     }
 }
 
-/* Text container perfectly centred */
+/* Header text centred */
 .header-text {
     text-align: center;
     margin: 0 auto;
@@ -78,7 +78,7 @@ a {
     margin-top: 0.4rem;
 }
 
-/* MOBILE HEADER FIX */
+/* Mobile header */
 @media (max-width: 768px) {
     .header-inner {
         flex-direction: column;
@@ -100,7 +100,7 @@ a {
     }
 }
 
-/* Fade-in animation for entire header */
+/* Header fade-in */
 @keyframes headerFade {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -136,7 +136,7 @@ a {
     background: #fff;
     padding: 16px;
     border-radius: 6px;
-    border-left: 5px solid #A6192E; /* Deep Crimson accent */
+    border-left: 5px solid #A6192E;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -145,25 +145,41 @@ a {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* FOOTER */
+/* FOOTER — FULLY UPDATED */
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 40px 20px;
     background-color: #A6192E; /* Deep Crimson */
     background-image: url("assets/images/Moderate grain texture.png");
     background-size: cover;
+    background-blend-mode: overlay;
     color: #FDFBF7; /* Cream text */
     margin-top: 40px;
 }
 
+/* Footer text */
+footer p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Social icons row */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Icon styling */
 .social-links img {
-    width: 28px;
-    height: 28px;
-    margin: 0 10px;
+    width: 32px;
+    height: 32px;
     opacity: 0.85;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .social-links img:hover {
     opacity: 1;
+    transform: translateY(-3px);
 }
