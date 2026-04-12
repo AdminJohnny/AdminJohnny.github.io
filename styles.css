@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f7f3e9; /* cream */
+    background: #f3e9d7; /* deeper cream */
     color: #3a2a2a;
 }
 
@@ -80,7 +80,7 @@ a {
     margin-top: 0.4rem;
 }
 
-/* MOBILE HEADER FIX — THIS BLOCK WAS MISSING ITS CLOSING BRACE */
+/* MOBILE HEADER FIX */
 @media (max-width: 768px) {
     .header-inner {
         flex-direction: column;
@@ -100,7 +100,7 @@ a {
     .header-text {
         margin: 0;
     }
-}   /* ← THIS BRACE WAS MISSING AND CAUSED THE HEADER TO DISAPPEAR */
+}
 
 /* HEADER ANIMATION */
 @keyframes headerFade {
@@ -111,8 +111,8 @@ a {
 /* BODY TWO-COLUMN LAYOUT */
 .body-container {
     display: flex;
-    justify-content: center;      /* centres both columns horizontally */
-    align-items: center;          /* centres both columns vertically */
+    justify-content: center;      /* centres the two columns as a group */
+    align-items: center;          /* vertical centring */
     gap: 40px;
     padding: 40px 20px;
     max-width: 1200px;
@@ -124,18 +124,19 @@ a {
 .body-left {
     flex: 3;
     font-family: 'Cavolini', Arial, sans-serif;
-    font-size: 1.45rem;           /* increased size */
+    font-size: 1.45rem;
     line-height: 1.9;
-    color: #A6192E;               /* deep crimson text */
-    text-align: center;           /* centres text horizontally */
-    display: flex;                /* centres text vertically */
+    color: #A6192E;
+    
+    /* COLUMN centred, TEXT left-aligned */
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;      /* centre column vertically */
+    align-items: flex-start;      /* keep text left-aligned */
 }
 
 .intro-line {
-    font-size: 1.8rem;            /* slightly larger headline */
+    font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -143,11 +144,13 @@ a {
 /* RIGHT COLUMN */
 .body-right {
     flex: 2;
+    
+    /* COLUMN centred */
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: center;      /* vertical centring */
     align-items: center;          /* horizontal centring */
+    gap: 20px;
 }
 
 /* BUTTON CARDS */
@@ -159,7 +162,9 @@ a {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
     max-width: 320px;
-    text-align: center;           /* centres text inside buttons */
+
+    /* TEXT left-aligned again */
+    text-align: left;
 }
 
 .index-card:hover {
